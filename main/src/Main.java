@@ -20,7 +20,7 @@ public class Main {
 
     // Update the first user (assuming Alice's ID is 1, this might need adjustment based on your actual data)
     System.out.println("\nUpdating Alice's information...");
-    User userToUpdate = userDao.getUserByNameAndPassword("Alice", "pass123");
+    User userToUpdate = userDao.getUserByUserNameAndPassword("Alice", "pass123");
     if (userToUpdate != null) {
       userToUpdate.setName("AliceUpdated");
       userToUpdate.setPass("newpass123");
@@ -39,7 +39,7 @@ public class Main {
 
     // Delete one user (assuming Bob's ID is 2, this might need adjustment based on your actual data)
     System.out.println("\nDeleting Bob...");
-    User userToDelete = userDao.getUserByNameAndPassword("Bob", "pass456");
+    User userToDelete = userDao.getUserByUserNameAndPassword("Bob", "pass456");
     if (userToDelete != null) {
       userDao.deleteUser(userToDelete.getId());
     }

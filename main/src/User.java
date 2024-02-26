@@ -1,17 +1,18 @@
 package src;
 
-
-// User model
 public class User {
-// Attributes
   private Integer id;
-  private  String name;
-  private  String pass;
+  private String name;
+  private String pass;
   private Integer age;
 
-  // best practice providing the three constructors
-
   public User() {
+  }
+
+  public User(String name, String pass, Integer age) {
+    this.name = name;
+    this.pass = pass;
+    this.age = age;
   }
 
   public User(Integer id, String name, String pass, Integer age) {
@@ -21,9 +22,11 @@ public class User {
     this.age = age;
   }
 
-  public User(String name, String pass, Integer age) {
-    this.name = name;
-    this.pass = pass;
+  public Integer getAge() {
+    return age;
+  }
+
+  public void setAge(Integer age) {
     this.age = age;
   }
 
@@ -51,11 +54,4 @@ public class User {
     this.pass = pass;
   }
 
-  public Integer getAge() {
-    return age;
-  }
-
-  public void setAge(Integer age) {
-    this.age = age;
-  }
 }
